@@ -1,0 +1,134 @@
+@font-face {
+    font-family: pixelFont;
+    src: url(fonts/rainyhearts.ttf);
+}
+
+* {
+    font-family: pixelFont;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(44, 62, 72);
+}
+
+body {
+    background-color: rgb(254, 247, 249);
+    display: flex;
+    justify-content: center;
+    background-size: 40px 40px;
+    background-image:
+        linear-gradient(to right, rgb(197 239 255) 3px, transparent 1px),
+        linear-gradient(to bottom, rgb(197 239 255) 3px, transparent 1px);
+}
+
+.container,
+button {
+    background-color: rgb(182, 222, 255);
+    border-color: rgb(114, 222, 255);
+    border-width: 8px;
+    border-style: none outset outset none;
+    border-radius: 20px;
+    box-shadow: 0px 0px 0px 5px #503a51;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 22px;
+    margin-top: 20px;
+    width: 700px;
+    min-width: 385px;
+    height: 620px;
+    padding: 35px 35px 22px 35px;
+
+    .menu-bar {
+        padding: 5px;
+        gap: 20px;
+        display: flex;
+
+        img {
+            flex: none;
+        }
+
+        .message-screen {
+            flex: 1;
+            padding: 10px;
+        }
+    }
+
+    .main-screen {
+        flex: 1;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        .display-image {
+            height: 300px;
+            width: auto;
+        }
+
+
+    }
+
+    .action-panel {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+}
+
+.main-screen,
+.message-screen,
+.profile-image {
+    background-color: rgb(247, 254, 255);
+    border-radius: 25px;
+    box-shadow: 0px 0px 0px 4px #3a4151;
+    border: inset 6px rgb(82, 171, 177);
+}
+
+button {
+    padding: 10px 15px;
+    flex: 1;
+    flex: none;
+}
+
+button:hover {
+    background-color: rgb(225, 225, 235);
+}
+
+button:active {
+    border-style: inset none none inset;
+}
+
+button:disabled {
+    border: solid 4px rgb(182, 238, 255);
+    color: #8b92e2;
+    background-color: rgb(182, 234, 255);
+}
+
+.bounce {
+    margin-top: 10px;
+    animation: bounce .5s infinite alternate;
+    -webkit-animation: bounce .5s infinite alternate;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+@-webkit-keyframes image {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-10px);
+    }
+}
